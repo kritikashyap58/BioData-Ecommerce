@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Bio Data</title>
+  <style>
+    :root{
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --muted: #6b7280;
+      --radius: 12px;
+      --maxw: 900px;
+    }
+
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, var(--bg), #eef2ff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      margin-top: 30px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow: 0 8px 30px rgba(37,99,235,0.08);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    @media (max-width:800px){
+      .container{grid-template-columns: 1fr;}
+    }
+
+    .side{
+      padding:28px;
+      background:linear-gradient(180deg, #ffffff, #f8fafc);
+    }
+
+    .avatar{
+      width:160px;
+      height:160px;
+      border-radius:20px;
+      object-fit:cover;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border:6px solid #fff;
+      display:block;
+      margin:0 auto 16px;
+    }
+
+    h1{font-size:24px;margin:6px 0 4px}
+    p.title{color:var(--muted);margin-top:0;font-weight:600}
+
+    .info-list{margin-top:18px;padding-left:0;list-style:none}
+    .info-list li{display:flex;align-items:center;margin:10px 0;color:#111827}
+    .info-list li span.label{width:90px;color:var(--muted);font-size:14px}
+
+    .skills{margin-top:12px}
+    .skill{display:inline-block;background:#eef2ff;color:var(--accent);padding:6px 10px;border-radius:999px;margin:6px 6px 0;font-weight:600;font-size:13px}
+
+    .main{padding:28px}
+    .section{margin-bottom:18px}
+    .section h2{font-size:18px;margin:0 0 8px}
+    .section p{color:#374151;margin:0}
+
+    .edu-list,.exp-list{padding-left:16px}
+    .edu-item,.exp-item{margin-bottom:12px}
+
+    .contact-btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+
+    footer{padding:12px 28px;color:var(--muted);font-size:13px;text-align:left}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="side">
+      <img class="avatar" src="girl-waving.jpg" alt="Avatar" />
+      <h1>Kriti Kashyap</h1>
+      <p class="title">Frontend Developer</p>
+
+      <ul class="info-list">
+        <li><span class="label">Email</span> <span>kriti@gmail.com</span></li>
+        <li><span class="label">Phone</span> <span>+91 98765 43210</span></li>
+        <li><span class="label">Location</span> <span>Pune, India</span></li>
+        <li><span class="label">Website</span> <span>kriti.dev</span></li>
+      </ul>
+
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">ReactJS</div>
+      </div>
+
+      <a class="contact-btn" href="mailto:kriti@gmail.com">Contact</a>
+    </aside>
+
+    <main class="main">
+      <section class="section">
+        <h2>Profile</h2>
+        <p>Passionate frontend developer with interest of building responsive web applications, focusing on performance and delightful user experiences.</p>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <ul class="edu-list">
+          <li><strong>B.Tech — Computer Science</strong>, PCET's Pimpri Chinchwad University, Pune (2023 — 2027)</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Portfolio Website</strong> — Personal site showcasing projects and blog.</li>
+          <li><strong>Shopify Theme</strong> — Custom theme built for a local business.</li>
+          <li><strong>ToDo List</strong> — Custom theme built for better productivity.</li>
+          <li><strong>Weather Forecast</strong> — Made with help of openWeatherAPI for better understanding of API calling.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Hobbies</h2>
+        <p>Photography, Reading and solving algorithm puzzles.</p>
+      </section>
+    </main>
+</div>
+</body>
+</html>
